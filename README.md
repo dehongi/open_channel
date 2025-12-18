@@ -48,6 +48,21 @@ y_n = solve_normal_depth(channel, Q=10.0, n=0.015, s=0.001)
 print(f"Normal depth: {y_n:.3f} m")
 ```
 
+## Practical Examples
+
+Check the `examples/` directory for ready-to-run scripts covering common engineering problems:
+
+1. **[Channel Design](examples/01_channel_design.py)** - Iterative design of a trapezoidal channel to meet specific constraints.
+2. **[Backwater Curve](examples/02_backwater_curve.py)** - Computing an M1 water surface profile upstream of a dam.
+3. **[Hydraulic Jump Analysis](examples/03_hydraulic_jump.py)** - Analyzing energy dissipation and stability of a hydraulic jump.
+4. **[Storm Drain Capacity](examples/04_storm_drain.py)** - Using English units to calculate circular pipe flow capacity.
+
+To run an example:
+
+```bash
+python examples/01_channel_design.py
+```
+
 ## Documentation
 
 See [docs/USAGE.md](docs/USAGE.md) for comprehensive usage documentation.
