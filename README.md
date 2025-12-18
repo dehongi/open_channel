@@ -56,6 +56,7 @@ Check the `examples/` directory for ready-to-run scripts covering common enginee
 2. **[Backwater Curve](examples/02_backwater_curve.py)** - Computing an M1 water surface profile upstream of a dam.
 3. **[Hydraulic Jump Analysis](examples/03_hydraulic_jump.py)** - Analyzing energy dissipation and stability of a hydraulic jump.
 4. **[Storm Drain Capacity](examples/04_storm_drain.py)** - Using English units to calculate circular pipe flow capacity.
+5. **[GVF Visualization](examples/05_drawdown_curve.py)** - Generating and plotting a drawdown curve (M2 profile) with Matplotlib.
 
 To run an example:
 

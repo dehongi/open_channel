@@ -7,6 +7,7 @@ This document provides detailed walk-throughs of the practical examples found in
 2. [Backwater Curve Analysis (M1 Profile)](#2-backwater-curve-analysis-m1-profile)
 3. [Hydraulic Jump in a Stilling Basin](#3-hydraulic-jump-in-a-stilling-basin)
 4. [Storm Drain Capacity (English Units)](#4-storm-drain-capacity-english-units)
+5. [GVF Profile Visualization](#5-gvf-profile-visualization)
 
 ---
 
@@ -116,3 +117,27 @@ Q_full = solve_discharge(channel, y=3.99, n=0.013, s=0.005, unit_system=UnitSyst
 - **Normal Depth for 30 cfs:** 1.49 ft (37% of diameter)
 
 Note that in circular pipes, the "half-full" discharge is not exactly half of the "full" discharge because the hydraulic radius changes non-linearly with depth. This example shows the half-full discharge is roughly 49.7% of the capacity.
+
+---
+
+## 5. GVF Profile Visualization
+**File:** `examples/05_drawdown_curve.py`
+
+### Problem Statement
+A rectangular channel ends in a free overfall. Under mild slope conditions, a **drawdown curve (M2 profile)** forms as the water depth drops from the normal depth ($y_n$) down to the critical depth ($y_c$) at the brink. We want to visualize the channel bed, the water surface, and the reference depths.
+
+### Implementation
+This script uses `matplotlib` to plot the profile data. It calculates the bed elevation and adds depths to it to plot the true water surface elevation.
+
+```python
+import matplotlib.pyplot as plt
+# ... (calculate x and y_water)
+z_bed = -s0 * x
+plt.plot(x, z_bed, 'k-', label='Channel Bed')
+plt.plot(x, z_bed + y_water, 'b-', label='Water Surface (M2)')
+plt.savefig('drawdown_profile.png')
+```
+
+### Analysis of Results
+The resulting plot (`drawdown_profile.png`) clearly shows the "drawdown" effect. The water surface starts nearly parallel to the bed at the upstream end (at normal depth) and curves downward as it approaches the overfall, crossing the critical depth line right at the brink.
+
