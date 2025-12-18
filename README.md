@@ -65,7 +65,9 @@ python examples/01_channel_design.py
 
 ## Documentation
 
-See [docs/USAGE.md](docs/USAGE.md) for comprehensive usage documentation.
+- [docs/USAGE.md](docs/USAGE.md) - Comprehensive usage documentation
+- [docs/EXAMPLES.md](docs/EXAMPLES.md) - Detailed engineering examples and walk-throughs
+
 
 ## Running Tests
 

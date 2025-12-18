@@ -1,5 +1,8 @@
 # Usage Documentation
 
+> 💡 Looking for practical engineering applications? Check out the **[Detailed Engineering Examples](EXAMPLES.md)**.
+
+
 ## Table of Contents
 
 1. [Unit Systems](#unit-systems)
